@@ -6,6 +6,28 @@ function App() {
   const [quote, setQuote] = useState({ text: '', author: '' });
   const [loading, setLoading] = useState(true);
   const [quotes, setQuotes] = useState([]);
+  const [buttonColor, setButtonColor] = useState('#16a085');
+  const [fontColor, setFontColor] = useState('#16a085');
+  const [colorIndex, setColorIndex] = useState(0);
+
+  const colors = [
+    '#1abc9c',
+    '#2ecc71',
+    '#34495e',
+    '#e67e22',
+    '#e74c3c',
+    '#8e44ad',
+    '#fd79a8',
+    '#7f8c8d',
+    '#d35400',
+    '#c0392b',
+    '#9b59b6',
+    '#4cd137',
+    '#f6b93b',
+    '#c8d6e5',
+    '#6ab04c',
+    '#00a8ff'
+  ];
 
   const fetchQuotes = async () => {
     setLoading(true);
@@ -22,32 +44,54 @@ function App() {
   };
 
   const generateRandomQuote = (quotesArray) => {
-    const randomIndex = Math.floor(Math.random() * quotesArray.length);
-    const randomQuote = quotesArray[randomIndex];
+    const randomQuote = quotesArray[Math.floor(Math.random() * quotesArray.length)];
     setQuote({ text: randomQuote.quote, author: randomQuote.author });
   };
 
+  const changeColors = () => {
+    const nextIndex = (colorIndex + 1) % colors.length;
+    const nextColor = colors[nextIndex];
+    
+    document.body.style.backgroundColor = nextColor;
+    setButtonColor(nextColor);
+    setFontColor(nextColor);
+    setColorIndex(nextIndex);
+  };
+  
+  
   useEffect(() => {
     fetchQuotes();
+    changeColors();
   }, []);
 
   return (
-    <div id="wrapper">
-      <div id="quote-box">
-        <div id="text">
-          {loading ? (<p>Loading...</p>) : (<blockquote><p>"{quote.text}"</p></blockquote>)}
-        </div>
-        <div id="author">
-          {loading ? null : <span>- {quote.author}</span>}
-        </div>
-        <div className="buttons">
-          <a className="button" id="tweet-quote" target="_top">
-            <img width="21rem" height="16rem" src="/images/twitter.png" alt="Twitter Logo"/>
-          </a>
-          <button onClick={() => generateRandomQuote(quotes)} className="button" id="new-quote">New Quote</button>
+    <>
+      <div id="wrapper">
+        <div id="quote-box">
+          <div id="text" style={{ color: fontColor }}>
+            {loading ? (<p>Loading...</p>) : (<blockquote><p>"{quote.text}"</p></blockquote>)}
+          </div>
+          <div id="author" style={{ color: fontColor }}>
+            {loading ? null : <span>- {quote.author}</span>}
+          </div>
+          <div className="buttons">
+            <a className="button" id="tweet-quote" target="_top" style={{ backgroundColor: buttonColor }}>
+              <img width="21rem" height="16rem" src="/images/twitter.png" alt="Twitter Logo" />
+            </a>
+            <button onClick={() => {
+              generateRandomQuote(quotes); 
+              changeColors();
+              }} 
+              className="button" 
+              id="new-quote" 
+              style={{ backgroundColor: buttonColor }}>
+                New Quote
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      <footer><h1><a href="https://github.com/JYoungeun" target="_blank">by Youngeun</a></h1></footer>
+    </>
   );
 }
 
