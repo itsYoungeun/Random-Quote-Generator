@@ -8,14 +8,53 @@
 }
 
 body {
-  background-color: black;
+  background-color: pink;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 #wrapper {
   background-color: white;
-  width: 32rem;
-  height: 20rem;
+}
+
+#text {
+  background-color: aquamarine;
+  margin: 0 auto;
+  width: 24rem;
+  height: 14rem;
+}
+
+#author {
+  background-color: rgb(42, 184, 137);
+  margin: 0 auto;
+  width: 24rem;
+  height: 4rem;
+}
+
+.buttons {
+  padding: 2.5rem 3rem 2.5rem;
+}
+
+.button {
+  padding: 0.6rem;
+}
+
+a {
+  background-color: purple;
+  margin-right: 23rem;
+}
+
+a > img {
+  transform: translateY(0.125rem);
+}
+
+div > button {
+  background-color: purple;
+  transform: translateY(-0.05rem);
+  color: white;
+  border: none;
+  height: 2.35rem;
 }
