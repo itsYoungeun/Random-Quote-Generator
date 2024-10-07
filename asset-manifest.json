@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/github.io/Random-Quote-Generator/static/css/main.a904fff1.css",
-    "main.js": "/github.io/Random-Quote-Generator/static/js/main.af7ee9e8.js",
-    "static/js/453.6290bb28.chunk.js": "/github.io/Random-Quote-Generator/static/js/453.6290bb28.chunk.js",
-    "index.html": "/github.io/Random-Quote-Generator/index.html",
-    "main.a904fff1.css.map": "/github.io/Random-Quote-Generator/static/css/main.a904fff1.css.map",
-    "main.af7ee9e8.js.map": "/github.io/Random-Quote-Generator/static/js/main.af7ee9e8.js.map",
-    "453.6290bb28.chunk.js.map": "/github.io/Random-Quote-Generator/static/js/453.6290bb28.chunk.js.map"
+    "main.css": "/Random-Quote-Generator/static/css/main.a904fff1.css",
+    "main.js": "/Random-Quote-Generator/static/js/main.b1f9f017.js",
+    "static/js/453.6290bb28.chunk.js": "/Random-Quote-Generator/static/js/453.6290bb28.chunk.js",
+    "index.html": "/Random-Quote-Generator/index.html",
+    "main.a904fff1.css.map": "/Random-Quote-Generator/static/css/main.a904fff1.css.map",
+    "main.b1f9f017.js.map": "/Random-Quote-Generator/static/js/main.b1f9f017.js.map",
+    "453.6290bb28.chunk.js.map": "/Random-Quote-Generator/static/js/453.6290bb28.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a904fff1.css",
-    "static/js/main.af7ee9e8.js"
+    "static/js/main.b1f9f017.js"
   ]
 }
