@@ -95,10 +95,20 @@ footer {
   margin-top: 1rem;
   text-align: center;
   width: 100%;
+  transform: translateY(-0.75rem);
 }
 
 footer > h1 > a {
   color: black;
   text-decoration: none;
   font-weight: 500;
+}
+
+.attribution-box {
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  width: 6rem;
+  height: 1.5rem;
+  margin: 0 auto;
+  margin-top: 0.5rem;
 }
