@@ -91,7 +91,9 @@ function App() {
           </div>
         </div>
       </div>
+      <div className="attribution-box">
       <footer><h1><a href="https://github.com/JYoungeun" target="_blank">by Youngeun</a></h1></footer>
+      </div>
     </>
   );
 }
