@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  transition: background-color 1s ease; 
+}
+
+#wrapper {
+  background-color: rgba(23, 22, 22, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+}
+
+#text {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 32rem;
+  font-size: 1.75rem;
+  color: rgb(110, 110, 110);
+}
+
+#author {
+  margin-left: 8rem;
+  padding: 0.5rem 0 2rem;
+  width: 24rem;
+  font-size: 1rem;
+  text-align: right;
+  color: rgb(133, 131, 131);
+}
+
+#text, #author {
+  transition: color 1s ease;
+}
+
+.buttons {
+  padding: 0 3rem 0;
+}
+
+.button {
+  color: black;
+  padding: 0.6rem;
+  border-radius: 0.25rem;
+  transition: background-color 1s ease;
+  font-weight: 500;
+}
+
+.buttons > a {
+  margin-right: 21rem;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.buttons > a:hover > img {
+  filter: brightness(0) invert(1);
+}
+
+a > img {
+  transform: translateY(0.125rem);
+  filter: brightness(0) saturate(100%);
+}
+
+div > button {
+  transform: translateY(-0.05rem);
+  border: none;
+  height: 2.35rem;
+  font-size: 1rem;
+  color: white;
+}
+
+div > button:hover {
+  cursor: pointer;
+  color: white;
+}
+
+footer {
+  font-size: 0.4rem;
+  margin-top: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+footer > h1 > a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
