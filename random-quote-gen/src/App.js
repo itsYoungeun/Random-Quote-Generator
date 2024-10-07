@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import './index.css';
+import twitterLogo from './images/twitter.png';
 
 function App() {
   const [quote, setQuote] = useState({ text: '', author: '' });
@@ -76,7 +77,7 @@ function App() {
           </div>
           <div className="buttons">
             <a className="button" id="tweet-quote" target="_blank" style={{ backgroundColor: buttonColor }} href={`https://twitter.com/intent/tweet?text="${quote.text}" - ${quote.author}`}>
-              <img width="21rem" height="16rem" src="/images/twitter.png" alt="Twitter Logo" />
+              <img width="21rem" height="16rem" src={twitterLogo} alt="Twitter Logo" />
             </a>
             <button onClick={() => {
               generateRandomQuote(quotes); 
