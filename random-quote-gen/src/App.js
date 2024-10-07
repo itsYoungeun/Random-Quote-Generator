@@ -75,7 +75,7 @@ function App() {
             {loading ? null : <span>- {quote.author}</span>}
           </div>
           <div className="buttons">
-            <a className="button" id="tweet-quote" target="_top" style={{ backgroundColor: buttonColor }}>
+            <a className="button" id="tweet-quote" target="_blank" style={{ backgroundColor: buttonColor }} href={`https://twitter.com/intent/tweet?text="${quote.text}" - ${quote.author}`}>
               <img width="21rem" height="16rem" src="/images/twitter.png" alt="Twitter Logo" />
             </a>
             <button onClick={() => {

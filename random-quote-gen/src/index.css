@@ -14,7 +14,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  transition: background-color 0.5s ease; 
+  transition: background-color 1s ease; 
 }
 
 #wrapper {
@@ -44,7 +44,7 @@ body {
 }
 
 #text, #author {
-  transition: color 0.5s ease;
+  transition: color 1s ease;
 }
 
 .buttons {
@@ -55,12 +55,20 @@ body {
   color: black;
   padding: 0.6rem;
   border-radius: 0.25rem;
-  transition: background-color 0.5s ease;
+  transition: background-color 1s ease;
   font-weight: 500;
 }
 
 .buttons > a {
   margin-right: 21rem;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.buttons > a:hover > img {
+  filter: brightness(0) invert(1);
 }
 
 a > img {
@@ -69,11 +77,15 @@ a > img {
 }
 
 div > button {
-  background-color: rgb(249, 65, 93);
   transform: translateY(-0.05rem);
   border: none;
   height: 2.35rem;
   font-size: 1rem;
+  color: white;
+}
+
+div > button:hover {
+  cursor: pointer;
   color: white;
 }
 
@@ -85,7 +97,7 @@ footer {
 }
 
 footer > h1 > a {
-  color: rgba(21, 19, 19, 0.75);
+  color: black;
   text-decoration: none;
   font-weight: 500;
 }
